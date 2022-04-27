@@ -114,7 +114,7 @@ final class SystemEventsHandlerTests: XCTestCase {
         sut.sceneOpenURLContexts(Set<UIOpenURLContext>())
         verify()
     }
-    
+    // For this test to pass we need to toggle off Connect Hardware Keyboard
     #if os(iOS) && !targetEnvironment(macCatalyst)
     func test_keyboardHeight() throws {
         let textField = UITextField(frame: .zero)
